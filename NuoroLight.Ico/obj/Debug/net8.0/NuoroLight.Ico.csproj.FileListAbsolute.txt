@@ -1,0 +1,14 @@
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\bin\Debug\net8.0\NuoroLight.Ico.deps.json
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\bin\Debug\net8.0\NuoroLight.Ico.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\bin\Debug\net8.0\NuoroLight.Ico.pdb
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.AssemblyInfoInputs.cache
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.AssemblyInfo.cs
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.csproj.CoreCompileInputs.cache
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\refint\NuoroLight.Ico.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.pdb
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\ref\NuoroLight.Ico.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\bin\Debug\net8.0\NuoroLight.Ico.runtimeconfig.json
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.csproj.AssemblyReference.cache
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Ico\obj\Debug\net8.0\NuoroLight.Ico.genruntimeconfig.cache

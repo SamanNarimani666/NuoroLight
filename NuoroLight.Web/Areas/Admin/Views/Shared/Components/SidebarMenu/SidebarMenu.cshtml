@@ -1,0 +1,44 @@
+﻿   <!--- Sidemenu -->
+<div id="sidebar-menu">
+    <ul>
+
+
+        <li>
+            <a asp-controller="Home" asp-action="Index" asp-area="Admin" class="waves-effect active"><i class="zmdi zmdi-view-dashboard"></i> <span> داشبورد </span> </a>
+        </li>
+
+
+        <li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-account"></i> <span> مدیریت کاربران </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+                <li><a asp-controller="User" asp-action="UserList" asp-area="Admin">لیست کاربران</a></li>
+                <li><a asp-controller="User" asp-action="CreateUser" asp-area="Admin">ایجاد کاربر جدید</a></li>
+            </ul>
+        </li>
+
+
+        <li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-devices"></i> <span> مدیریت دستگاه ها </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+                <li><a asp-controller="Device" asp-action="Index" asp-area="Admin">لیست دستگاه ها</a></li>
+                <li><a asp-controller="Device" asp-action="CreateDevice" asp-area="Admin">ایجاد  دستگاه جدید</a></li>
+                <li><a asp-controller="Device" asp-action="FilterLogs" asp-area="Admin">لاگ دستگاه ها</a></li>
+
+            </ul>
+        </li>
+
+
+        <li class="has_sub">
+            <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-settings "></i> <span> تنظیمات سایت </span> <span class="menu-arrow"></span></a>
+            <ul class="list-unstyled">
+                <li><a asp-controller="SiteSetting" asp-area="Admin" asp-action="SiteInformation">اطلاعات سایت</a></li>
+                <li><a asp-controller="SiteSetting" asp-area="Admin" asp-action="EditSiteSetting">ویرایش اطلاعات سایت</a></li>
+            </ul>
+        </li>
+        <li>
+            <a asp-controller="ContactUs" asp-action="Index" asp-area="Admin"><i class="fa fa-phone"></i><span> لیست تماس ها </span></a>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+<!-- Sidebar -->

@@ -1,0 +1,33 @@
+﻿@using NuoroLight.Application.Utils
+
+@{
+    ViewData["Title"] = "پنل ادمین";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-box">
+                <h1>وضعیت دستگاه ها</h1>
+                <table class="table table-bordered table-striped" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>پیام</th>
+                            <th>زمان</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messagesTableBody">
+                        <!-- داده‌ها به طور داینامیک در اینجا اضافه می‌شوند -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer text-center mt-4">
+    @DateTime.Now.ToStringShamsiDate()
+</footer>
+
+

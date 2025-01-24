@@ -1,0 +1,17 @@
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\bin\Debug\net8.0\NuoroLight.Infrastructure.deps.json
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\bin\Debug\net8.0\NuoroLight.Infrastructure.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\bin\Debug\net8.0\NuoroLight.Infrastructure.pdb
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.AssemblyInfo.cs
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\refint\NuoroLight.Infrastructure.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.pdb
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\ref\NuoroLight.Infrastructure.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\bin\Debug\net8.0\NuoroLight.Infrastructure.runtimeconfig.json
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\bin\Debug\net8.0\NuoroLight.Domain.dll
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\bin\Debug\net8.0\NuoroLight.Domain.pdb
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLig.1344AC02.Up2Date
+C:\Users\SAMAN\Desktop\NuoroLight\NuoroLight.Infrastructure\obj\Debug\net8.0\NuoroLight.Infrastructure.genruntimeconfig.cache

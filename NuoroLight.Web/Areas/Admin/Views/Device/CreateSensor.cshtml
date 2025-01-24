@@ -1,0 +1,112 @@
+﻿@using NuoroLight.Domain.Entities.Device
+@model NuoroLight.Domain.ViewModels.Sensor.CreateSensorViewModel
+@{
+    ViewData["Title"] = "ایجاد سنسور جدید";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <h2>افزودن سنسور</h2>
+        <hr />
+        <div class="row">
+            <form method="post" asp-action="CreateSensor" asp-controller="Device" asp-area="Admin">
+                <input type="hidden" asp-for="DeviceId"/>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            اطلاعات سنسور
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <!-- نام سنسور -->
+                            <div class="form-group">
+                                <label asp-for="Name"></label>
+                                <input asp-for="Name" class="form-control" placeholder="مثلاً دما، رطوبت">
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <!-- نوع سنسور -->
+                            <div class="form-group">
+                                <label asp-for="SensorType"></label>
+                                <select asp-for="SensorType" class="form-control">
+                                    <option value="">انتخاب کنید</option>
+                                    @foreach (var item in Html.GetEnumSelectList<SensorType>())
+                                    {
+                                        <option value="@item.Value">@item.Text</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="SensorType" class="text-danger"></span>
+                            </div>
+
+                            <!-- دستورات سنسور -->
+                            <div class="form-group">
+                                <label>دستورات سنسور</label>
+                                <table class="table table-bordered" id="commandsTable">
+                                    <thead>
+                                        <tr>
+                                            <th asp-for="Commands[0].Display">عملیات دستور</th>
+                                            <th asp-for="Commands[0].Value">دستور</th>
+                                            <th asp-for="Commands[0].Description">توضیحات</th>
+                                            <th>عملیات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input name="Commands[0].Display" class="form-control" placeholder="مثلاً شروع">
+                                            </td>
+                                            <td>
+                                                <input name="Commands[0].Value" class="form-control" placeholder="مثلاً START">
+                                            </td>
+                                            <td>
+                                                <input name="Commands[0].Description" class="form-control" placeholder="توضیحات">
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-sm remove-command">حذف</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary btn-sm" id="addCommand">افزودن دستور</button>
+                                <span asp-validation-for="Commands" class="text-danger"></span>
+                            </div>
+
+                            <!-- دکمه‌های ارسال -->
+                            <input type="submit" value="ثبت اطلاعات" class="btn btn-success" />
+                            <a asp-controller="Sensor" asp-action="Index" class="btn btn-danger">انصراف</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+
+<script>
+    // افزودن دستور جدید به جدول
+    document.getElementById('addCommand').addEventListener('click', function () {
+        var table = document.getElementById('commandsTable').getElementsByTagName('tbody')[0];
+        var rowCount = table.rows.length;
+        var newRow = table.insertRow(rowCount);
+
+        newRow.innerHTML = `
+                <td><input name="Commands[${rowCount}].Display" class="form-control" placeholder="مثلاً شروع"></td>
+                <td><input name="Commands[${rowCount}].Value" class="form-control" placeholder="مثلاً START"></td>
+                <td><input name="Commands[${rowCount}].Description" class="form-control" placeholder="توضیحات"></td>
+                <td><button type="button" class="btn btn-danger btn-sm remove-command">حذف</button></td>
+            `;
+    });
+
+    // حذف دستور از جدول
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('remove-command')) {
+            e.target.closest('tr').remove();
+        }
+    });
+</script>
+}

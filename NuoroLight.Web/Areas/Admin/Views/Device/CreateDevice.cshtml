@@ -1,0 +1,58 @@
+﻿@model NuoroLight.Domain.ViewModels.Device.CreateDeviceViewModel
+@{
+    ViewData["Title"] = "ایجاد دستگاه جدید";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+
+
+
+<div class="content">
+    <div class="container">
+        <h2>افزودن دستگاه</h2>
+        <hr />
+        <div class="row">
+            <form method="post" asp-action="CreateDevice" asp-controller="Device" enctype="multipart/form-data">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            اطلاعات دستگاه
+                        </div>
+                        <!-- /.panel-heading --> <div class="panel-body">
+                            <div class="form-group">
+                                <label>نام دستگاه</label>
+                                <input asp-for="Name" class="form-control">
+                            </div>
+                            <span asp-validation-for="Name" class="text text-danger"></span>
+                            <div class="form-group">
+                                <label>MAC</label>
+                                <input asp-for="MAC" placeholder="فرمت استاندارد MAC Address (XX:XX:XX:XX:XX:XX)" class="form-control">
+                            </div>
+                            <span asp-validation-for="MAC"  class="text text-danger"></span>
+
+                            <div class="form-group">
+                                <label>مکان</label>
+                                <input asp-for="Location" class="form-control">
+                            </div>
+                            <span asp-validation-for="Location" class="text text-danger"></span>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" asp-for="IsActive" />
+                                    فعال / غیر فعال
+                                </label>
+                            </div>
+                            <span asp-validation-for="IsActive"></span>          
+                            <input type="submit" value="ثبت اطلاعات" class="btn btn-success" />
+                            <a asp-controller="Device" asp-action="Index" class="btn btn-danger" asp-area="Admin">انصراف</a>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> <!-- container -->
+
+</div>
+
+

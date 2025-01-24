@@ -1,0 +1,228 @@
+﻿@using NuoroLight.Application.Extensions
+@model List<NuoroLight.Domain.Entities.Device.Sensor>
+@{
+    ViewData["Title"] = $"{ViewData["DeviceName"]} سنسور های دستگاه";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+
+
+
+<div class="row">
+
+    <div class="col-lg-12">
+        <div class="card-box table-responsive">
+            <h4 class="header-title m-t-0 m-b-30">لیست سنسور ها</h4>
+            <a class="btn btn-success btn-sm float-end" asp-action="CreateSensor" asp-area="Admin" asp-route-deviceId="@ViewData["DeviceId"]" asp-controller="Device">ایجاد سنسور جدید برای دستگاه @ViewData["DeviceName"]</a>
+
+            <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        @if (Model != null && Model.Any())
+                        {
+
+
+                            <table class="table table-hover">
+
+                                <thead>
+                                    <tr>
+                                        <th>نام </th>
+                                        <th>نوع سنسور</th>
+                                        <th>مدیریت دستورات</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Name</td>
+                                            <td>@item.SensorType.GetDisplayName()</td>
+                                            <td >
+                                                @if (item.Commands != null && item.Commands.Any())
+                                                {
+                                                    @foreach (var command in item.Commands)
+                                                    {
+                                                        @if (command.Value == "0,0,0")
+                                                        {
+                                                            <div class="command-item" style="display:inline;">
+                                                                <input type="color" class="color-picker" value="#000000" />
+                                                                <button type="button" class="submit-command btn btn-success btn-lg" data-display="@command.Display">
+                                                                    @command.Description
+                                                                </button>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <div class="command-item" style="display:inline;">
+                                                                <input type="hidden" class="command-value" value="@command.Value" />
+                                                                <button type="button" class="submit-command btn @(command.Value=="1"?"btn-warning":"btn-info") btn-lg" data-display="@command.Display">
+                                                                    @command.Description
+                                                                </button>
+                                                            </div>
+                                                        }
+                                                    }
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <partial name="_NotFoundItem" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div><!-- end col -->
+
+
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     // انتخاب تمام دکمه‌های submit-command
+        //     document.querySelectorAll(".submit-command").forEach(function (button) {
+        //         button.addEventListener("click", function () {
+        //             // دریافت مقادیر display و value
+        //             var display = this.getAttribute("data-display");
+        //             var value = this.closest(".command-item").querySelector(".command-value").value;
+
+        //             console.log("Display:", display);
+        //             console.log("Value:", value);
+
+        //             // ارسال درخواست به API
+        //             fetch('/send-command', {
+        //                 method: 'POST',
+        //                 headers: {
+        //                     'Content-Type': 'application/json'
+        //                 },
+        //                 body: JSON.stringify({ Topic: display, Message: value })
+        //             })
+        //                 .then(response => {
+        //                     if (!response.ok) {
+        //                         throw new Error("Network response was not ok " + response.statusText);
+        //                     }
+        //                     return response.json();
+        //                 })
+        //                 .then(data => {
+        //                     ShowMessage('پیام', 'دستور ارسال شد');
+        //                 })
+        //                 .catch(error => {
+        //                     alert("Error sending command: " + error.message);
+        //                     ShowMessage('خطا', "دستور ارسال شد"+error.message,'error');
+
+        //                 });
+        //         });
+        //     });
+        // });
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     document.querySelectorAll(".submit-command").forEach(function (button) {
+        //         button.addEventListener("click", function () {
+        //             var display = this.getAttribute("data-display");
+        //             var commandItem = this.closest(".command-item");
+        //             var value;
+
+        //             // بررسی وجود color picker
+        //             var colorPicker = commandItem.querySelector(".color-picker");
+        //             if (colorPicker) {
+        //                 value = colorPicker.value; // مقدار color picker
+        //             } else {
+        //                 value = commandItem.querySelector(".command-value").value; // مقدار پیش‌فرض
+        //             }
+
+        //             console.log("Display:", display);
+        //             console.log("Value:", value);
+
+        //             // ارسال درخواست به API
+        //             fetch('/send-command', {
+        //                 method: 'POST',
+        //                 headers: {
+        //                     'Content-Type': 'application/json'
+        //                 },
+        //                 body: JSON.stringify({ Topic: display, Message: value })
+        //             })
+        //                 .then(response => {
+        //                     if (!response.ok) {
+        //                         throw new Error("Network response was not ok " + response.statusText);
+        //                     }
+        //                     return response.json();
+        //                 })
+        //                 .then(data => {
+        //                     ShowMessage('پیام', 'دستور ارسال شد');
+        //                 })
+        //                 .catch(error => {
+        //                     ShowMessage('خطا', "خطا در ارسال دستور: " + error.message, 'error');
+        //                 });
+        //         });
+        //     });
+        // });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // تابع تبدیل هگزادسیمال به RGB
+            function hexToRgb(hex) {
+                // حذف # از ابتدای رشته
+                hex = hex.replace("#", "");
+                // تبدیل به مقادیر عددی
+                let r = parseInt(hex.substring(0, 2), 16);
+                let g = parseInt(hex.substring(2, 4), 16);
+                let b = parseInt(hex.substring(4, 6), 16);
+                return `${r},${g},${b}`; // مقدار RGB به صورت رشته
+            }
+
+            // افزودن رویداد کلیک به دکمه‌های submit-command
+            document.querySelectorAll(".submit-command").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    var display = this.getAttribute("data-display");
+                    var commandItem = this.closest(".command-item");
+                    var value;
+
+                    // بررسی وجود color picker
+                    var colorPicker = commandItem.querySelector(".color-picker");
+                    if (colorPicker) {
+                        value = hexToRgb(colorPicker.value); // تبدیل هگزادسیمال به RGB
+                    } else {
+                        value = commandItem.querySelector(".command-value").value; // مقدار پیش‌فرض
+                    }
+
+                    console.log("Display:", display);
+                    console.log("Value (RGB):", value);
+
+                    // ارسال درخواست به API
+                    fetch('/send-command', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ Topic: display, Message: value })
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error("Network response was not ok " + response.statusText);
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            ShowMessage('پیام', 'دستور ارسال شد');
+                        })
+                        .catch(error => {
+                            ShowMessage('خطا', "خطا در ارسال دستور: " + error.message, 'error');
+                        });
+                });
+            });
+        });
+
+
+    </script>
+    <partial name="_ValidationScriptsPartial" />
+}

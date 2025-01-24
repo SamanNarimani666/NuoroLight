@@ -1,0 +1,143 @@
+﻿@using NuoroLight.Domain.Entities.Permissions
+@model NuoroLight.Domain.ViewModels.User.CreateUserViewModel
+@{
+    ViewData["Title"] = "ایجاد کاربر جدید";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+    var permission = ViewBag.Permission as List<Permission>;
+}
+
+@section Styles
+{
+<link href="/Admin/assets/plugins/fileuploads/css/dropify.min.css" rel="stylesheet" type="text/css" />
+}
+
+
+<div class="content">
+    <div class="container">
+        <h2>افزودن كاربر</h2>
+        <hr />
+        <div class="row">
+            <form method="post" asp-action="CreateUser" asp-controller="User" enctype="multipart/form-data">
+                <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            اطلاعات کاربر
+                        </div>
+                        <!-- /.panel-heading --> <div class="panel-body">
+                            <div class="form-group">
+                                <label>نام کاربری</label>
+                                <input asp-for="UserName" class="form-control">
+                            </div>
+                            <span asp-validation-for="UserName" class="text text-danger"></span>
+                            <div class="form-group">
+                                <label>ایمیل</label>
+                                <input asp-for="Email" class="form-control">
+                            </div>
+                            <span asp-validation-for="Email" class="text text-danger"></span>
+                            <div class="form-group">
+                                <label>موبایل</label>
+                                <input asp-for="Mobile" class="form-control">
+                            </div>
+                            <span asp-validation-for="Mobile" class="text text-danger"></span>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" asp-for="IsActive" />
+                                    فعال / غیر فعال
+                                </label>
+                            </div>
+                            <span asp-validation-for="IsActive"></span>
+                            <div class="form-group">
+                                <label>کلمه عبور</label>
+                                <input type="password" asp-for="PassWord" class="form-control">
+                            </div>
+                            <span asp-validation-for="PassWord" class="text text-danger"></span>
+                            <div class="form-group">
+                                <label>تكرار كلمه عبور </label>
+                                <input type="password" asp-for="ConferimPassWord" class="form-control">
+                            </div>
+                            <span asp-validation-for="ConferimPassWord" class="text text-danger"></span>
+                            <hr />
+                            <div class="form-group">
+                                <label>انتخاب نقش کاربر</label>
+                                <ul>
+                                @foreach (var item in permission.Where(p=>p.ParentID==null))
+                                {
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" value="@item.PermissionId" name="SelectedPermission">
+                                            @item.PermissionName
+                                            @if (permission.Any(p => p.ParentID == item.ParentID))
+                                            {
+                                                <ul>
+                                                    @foreach (var Subitem in permission.Where(p => p.ParentID == item.PermissionId))
+                                                    {
+                                                        <li>
+                                                            <input class="form-check-input" type="checkbox" value="@Subitem.PermissionId" name="SelectedPermission">
+                                                            @Subitem.PermissionName
+                                                        </li>
+                                                    }
+                                                </ul>
+
+                                            }
+                                    </li>
+                                }
+                                </ul>
+                            </div>
+                            <input type="submit" value="ثبت اطلاعات" class="btn btn-success" />
+                            <a asp-controller="User" asp-action="UserList" class="btn btn-danger" asp-area="Admin">انصراف</a>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-box">
+
+                        <h4 class="header-title m-t-0 m-b-30">تصوير پروفايل</h4>
+
+                        <div class="dropify-wrapper has-preview">
+
+                            <div class="dropify-message">
+                                <span class="file-icon"></span>
+                                <p>فایل را به اینجا بکشید یا کلیک کنید</p>
+                                <p class="dropify-error">با پوزش فراوان، خطایی رخ داده</p>
+                            </div>
+                            <div class="dropify-loader" style="display: none;"></div>
+                            <div class="dropify-errors-container"><ul></ul></div>
+                            <input type="file" id="imgInp" name="userAvatar" class="dropify">
+                            <button type="button" class="dropify-clear">پاک کردن</button>
+                            <div class="dropify-preview" style="display: block;">
+                                <span class="dropify-render"><img id="UserImage" src="/Images/defaults/Default.jpg"></span>
+                                <div class="dropify-infos">
+                                    <div class="dropify-infos-inner">
+
+                                        <p class="dropify-infos-message">برای جایگزینی فایل را به اینجا بکشید یا کلیک کنید</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> <!-- container -->
+
+</div>
+
+
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+<script>
+    imgInp.onchange = evt => {
+        const [file] = imgInp.files
+        if (file) {
+            UserImage.src = URL.createObjectURL(file)
+        }
+    }
+</script>
+}
+
+
+
+
+

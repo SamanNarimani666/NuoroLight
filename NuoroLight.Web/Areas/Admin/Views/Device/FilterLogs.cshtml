@@ -1,0 +1,111 @@
+﻿@using NuoroLight.Application.Utils
+@using NuoroLight.Domain.ViewModels.Device
+@model FilterDeviceLogsViewModel
+@{
+    ViewData["Title"] = "لاگ ها";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+
+
+
+<div class="row">
+
+    <div class="col-sm-3">
+        <div class="panel panel-color panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">فیلتر</h3>
+            </div>
+            <div class="panel-body">
+                <form asp-controller="Device" asp-action="FilterLogs" asp-area="Admin" method="get" id="filter-form" class="form-horizontal" role="form">
+                    <input type="hidden" asp-for="PageId" />
+                    <div class="form-group">
+                    </div>
+                    <div class="control-group">
+                        @foreach (var item in Html.GetEnumSelectList<FilterDeviceLogOrderBy>())
+                        {
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    @if (Convert.ToByte(item.Value) == Convert.ToByte(Model.OrderBy))
+                                    {
+
+                                        <input class="form-check-input" type="radio" value="@item.Value" name="@nameof(Model.OrderBy)" checked="checked" />
+
+                                    }
+                                    else
+                                    {
+                                        <input class="form-check-input" type="radio" value="@item.Value" name="@nameof(Model.OrderBy)" />
+
+                                    }
+
+                                    <span class="text">@item.Text</span>
+                                </label>
+                            </div>
+
+                        }
+                    </div>
+                    <div class="form-control">
+                        <button type="submit" class="btn btn-block btn-xs btn-purple waves-effect waves-light">فیلتر</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-9">
+        <div class="card-box table-responsive">
+            <h4 class="header-title m-t-0 m-b-30">لیست لاگ  ها</h4>
+
+            <div id="datatable_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        @if (Model.DeviceLogs != null && Model.DeviceLogs.Any())
+                        {
+
+
+                            <table class="table table-dark">
+
+                                <thead>
+                                    <tr>
+                                        <th>شناسه </th>
+                                        <th>نتن</th>
+                                        <th>تاریخ</th>
+                                        <th>ساعت</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (var item in Model.DeviceLogs)
+                                    {
+                                        <tr>
+                                            <td>@item.LogId</td>
+                                            <td>@item.Text</td>
+                                            <td>@item.CreatedAt.ToShamsiDate()</td>
+                                            <td>@item.CreatedAt.ToString("HH:mm:ss")</td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <partial name="_NotFoundItem" />
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="col-sm-6">
+                            <partial name="_AdminPagingPartial" model="@Model.GetCurrentPaging()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end col -->
+
+
+    </div>
+</div>
+

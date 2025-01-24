@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B497CD4-82ED-4A5D-A2C6-04DED6DD28E4}|NuoroLight.Web\\NuoroLight.Web.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.web\\areas\\admin\\views\\device\\filterlogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7B497CD4-82ED-4A5D-A2C6-04DED6DD28E4}|NuoroLight.Web\\NuoroLight.Web.csproj|solutionrelative:nuorolight.web\\areas\\admin\\views\\device\\filterlogs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D123D392-DD0C-4EE9-A61E-DAFA057A29CC}|NuoroLight.Infrastructure\\NuoroLight.Infrastructure.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.infrastructure\\repositories\\device\\devicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D123D392-DD0C-4EE9-A61E-DAFA057A29CC}|NuoroLight.Infrastructure\\NuoroLight.Infrastructure.csproj|solutionrelative:nuorolight.infrastructure\\repositories\\device\\devicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B497CD4-82ED-4A5D-A2C6-04DED6DD28E4}|NuoroLight.Web\\NuoroLight.Web.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.web\\areas\\admin\\views\\shared\\components\\sidebarmenu\\sidebarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7B497CD4-82ED-4A5D-A2C6-04DED6DD28E4}|NuoroLight.Web\\NuoroLight.Web.csproj|solutionrelative:nuorolight.web\\areas\\admin\\views\\shared\\components\\sidebarmenu\\sidebarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B497CD4-82ED-4A5D-A2C6-04DED6DD28E4}|NuoroLight.Web\\NuoroLight.Web.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.web\\areas\\admin\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B497CD4-82ED-4A5D-A2C6-04DED6DD28E4}|NuoroLight.Web\\NuoroLight.Web.csproj|solutionrelative:nuorolight.web\\areas\\admin\\controllers\\devicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{126D01CC-CA8F-4D20-9023-D87454F9EFCC}|NuoroLight.Domain\\NuoroLight.Domain.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.domain\\viewmodels\\device\\filterdevicelogsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{126D01CC-CA8F-4D20-9023-D87454F9EFCC}|NuoroLight.Domain\\NuoroLight.Domain.csproj|solutionrelative:nuorolight.domain\\viewmodels\\device\\filterdevicelogsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96B901F0-26BF-4627-B281-5FEE056E6F38}|NuoroLight.Application\\NuoroLight.Application.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.application\\services\\implementations\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96B901F0-26BF-4627-B281-5FEE056E6F38}|NuoroLight.Application\\NuoroLight.Application.csproj|solutionrelative:nuorolight.application\\services\\implementations\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96B901F0-26BF-4627-B281-5FEE056E6F38}|NuoroLight.Application\\NuoroLight.Application.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.application\\services\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96B901F0-26BF-4627-B281-5FEE056E6F38}|NuoroLight.Application\\NuoroLight.Application.csproj|solutionrelative:nuorolight.application\\services\\interfaces\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{126D01CC-CA8F-4D20-9023-D87454F9EFCC}|NuoroLight.Domain\\NuoroLight.Domain.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.domain\\irepositories\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{126D01CC-CA8F-4D20-9023-D87454F9EFCC}|NuoroLight.Domain\\NuoroLight.Domain.csproj|solutionrelative:nuorolight.domain\\irepositories\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{126D01CC-CA8F-4D20-9023-D87454F9EFCC}|NuoroLight.Domain\\NuoroLight.Domain.csproj|c:\\users\\saman\\desktop\\nuorolight\\nuorolight.domain\\viewmodels\\device\\filterdeviceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{126D01CC-CA8F-4D20-9023-D87454F9EFCC}|NuoroLight.Domain\\NuoroLight.Domain.csproj|solutionrelative:nuorolight.domain\\viewmodels\\device\\filterdeviceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SidebarMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Web\\Areas\\Admin\\Views\\Shared\\Components\\SidebarMenu\\SidebarMenu.cshtml",
+              "RelativeDocumentMoniker": "NuoroLight.Web\\Areas\\Admin\\Views\\Shared\\Components\\SidebarMenu\\SidebarMenu.cshtml",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Web\\Areas\\Admin\\Views\\Shared\\Components\\SidebarMenu\\SidebarMenu.cshtml",
+              "RelativeToolTip": "NuoroLight.Web\\Areas\\Admin\\Views\\Shared\\Components\\SidebarMenu\\SidebarMenu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-18T21:36:55.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FilterLogs.cshtml",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Web\\Areas\\Admin\\Views\\Device\\FilterLogs.cshtml",
+              "RelativeDocumentMoniker": "NuoroLight.Web\\Areas\\Admin\\Views\\Device\\FilterLogs.cshtml",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Web\\Areas\\Admin\\Views\\Device\\FilterLogs.cshtml",
+              "RelativeToolTip": "NuoroLight.Web\\Areas\\Admin\\Views\\Device\\FilterLogs.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAIwFQAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-18T21:32:23.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeviceController.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Web\\Areas\\Admin\\Controllers\\DeviceController.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Web\\Areas\\Admin\\Controllers\\DeviceController.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Web\\Areas\\Admin\\Controllers\\DeviceController.cs",
+              "RelativeToolTip": "NuoroLight.Web\\Areas\\Admin\\Controllers\\DeviceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:27:29.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Application\\Services\\Implementations\\DeviceService.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Application\\Services\\Implementations\\DeviceService.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Application\\Services\\Implementations\\DeviceService.cs",
+              "RelativeToolTip": "NuoroLight.Application\\Services\\Implementations\\DeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwIMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:26:15.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Application\\Services\\Interfaces\\IDeviceService.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Application\\Services\\Interfaces\\IDeviceService.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Application\\Services\\Interfaces\\IDeviceService.cs",
+              "RelativeToolTip": "NuoroLight.Application\\Services\\Interfaces\\IDeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:26:05.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeviceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Infrastructure\\Repositories\\Device\\DeviceRepository.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Infrastructure\\Repositories\\Device\\DeviceRepository.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Infrastructure\\Repositories\\Device\\DeviceRepository.cs",
+              "RelativeToolTip": "NuoroLight.Infrastructure\\Repositories\\Device\\DeviceRepository.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAD4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:22:05.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDeviceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Domain\\IRepositories\\IDeviceRepository.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Domain\\IRepositories\\IDeviceRepository.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Domain\\IRepositories\\IDeviceRepository.cs",
+              "RelativeToolTip": "NuoroLight.Domain\\IRepositories\\IDeviceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:21:42.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FilterDeviceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceViewModel.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceViewModel.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceViewModel.cs",
+              "RelativeToolTip": "NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:18:38.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FilterDeviceLogsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceLogsViewModel.cs",
+              "RelativeDocumentMoniker": "NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceLogsViewModel.cs",
+              "ToolTip": "C:\\Users\\SAMAN\\Desktop\\NuoroLight\\NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceLogsViewModel.cs",
+              "RelativeToolTip": "NuoroLight.Domain\\ViewModels\\Device\\FilterDeviceLogsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T21:18:20.698Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
